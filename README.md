@@ -1,34 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Google Clone with Next.js
+
+It is the clone of the Google where you can search for anything and it will show the exactly same result we've used the Google Custom API through which we made this project, this is full responsive and you can also install it as the PWA. You can visit the links as well not danger in that, but there is one drawback of this that Google only allow 100 request from single API KEY per day. So this application can search only 100 times a day.
+
+## Features
+
+- Realtime and Accurate Google Search
+- Full Screen mode
+- Installable **PWA**
+- Search Any Query
+- Full Responsiveness
+- Dark Theme support based on user's device
+
+## Technologies used
+
+<p>  
+<img title="React JS" width="60" src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-128.png" />
+<img title="Next JS" width="60" src="https://iconape.com/wp-content/files/gm/82643/svg/next-js.svg"  />&nbsp;
+<img title="Tailwind" width="60" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/tailwindcss_logo_icon_167923.png"> 
+<img title="Google Search API" width="60" src="https://cutt.ly/zRgpYnW">
+</p>
+
+## Demo
+
+[Click Here to see the Live Demo]()
+
 
 ## Getting Started
+
+Create a directory or a folder
+
+```bash
+  mkdir project
+```
+
+Clone the project
+
+```bash
+  git clone github-url
+```
+
+Go to the project directory
+
+```bash
+  cd project
+```
+
+Install dependencies
+
+```bash
+  npm install
+  # or
+  yarn
+```
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
+  npm run dev
+  # or
+  yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying pages/index.js. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+API routes can be accessed on http://localhost:3000/api/hello. This endpoint can be edited in pages/api/hello.js.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The pages/api directory is mapped to /api/\*. Files in this directory are treated as API routes instead of React pages.
 
-## Learn More
+## Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+To run this project, you will need to add the following environment variables to your .env file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`NEXT_PUBLIC_API_KEY` - [Click Here](https://developers.google.com/custom-search/v1/introduction#identify_your_application_to_google_with_api_ke)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Go to link and click on **Get a Key**
+- If you've already created a project than continue with it else create a new one and follow the steps after completing you'll get the API KEY
 
-## Deploy on Vercel
+`NEXT_PUBLIC_CONTEXT_KEY` - [Click Here](https://cse.google.com/cse/create/new)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Go to link and type `www.google.com` and click **Create**
+- then click on `Get Code` 
+ - you will get the script file tag in that file such as `<script async src="https://cse.google.com/cse.js?cx=b221ffffddfd63f8a4"></script>` we  only need the `cx` value *copy* that and paste in you `.env` 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Feedback
+
+If you have any feedback, please reach out to us at jatinsharma089659@gmail.com
+
+## Developer
+
+- [@j471n](https://github.com/j471n/)
