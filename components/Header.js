@@ -7,7 +7,7 @@ import HeaderOptions from "./HeaderOptions";
 
 export default function Header() {
   const router = useRouter();
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState(router.query.term);
 
   function search(e) {
     e.preventDefault();
@@ -34,7 +34,6 @@ export default function Header() {
             onChange={(e) => setSearchInput(e.target.value)}
             placeholder="Search..."
             className="flex-grow w-full focus:outline-none dark:bg-secondary-dark"
-            defaultValue={router.query.term}
           />
 
           {searchInput && (
