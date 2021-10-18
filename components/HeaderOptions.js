@@ -13,7 +13,7 @@ export default function HeaderOptions() {
     <div className="flex w-full text-gray-700 justify-evenly text-sm lg:text-base lg:justify-start lg:space-x-36 lg:pl-52 border-b-[1px]">
       {/* Left */}
 
-      <div className="flex space-x-6">
+      <div className="flex space-x-6 justify-evenly sm:justify-start w-full sm:w-auto  ">
         <HeaderOption Icon={SearchIcon} title="All" selected />
         <HeaderOption Icon={PhotographIcon} title="Images" />
         <HeaderOption Icon={PlayIcon} title="Videos" />
@@ -22,7 +22,7 @@ export default function HeaderOptions() {
         <HeaderOption Icon={DotsVerticalIcon} title="More" />
       </div>
       {/* Right */}
-      <div className="flex space-x-4">
+      <div className="hidden space-x-4  sm:inline-flex">
         <p className="link">Settings</p>
         <p className="link">Tools</p>
       </div>

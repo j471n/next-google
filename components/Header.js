@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 bg-white font-sans">
-      <div className="flex w-full p-6 items-center ">
+      <div className="flex w-full p-6 items-center justify-between flex-col sm:flex-row">
         <Image
           src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
           height={40}
@@ -28,12 +28,12 @@ export default function Header() {
           onClick={() => router.push("/")}
         />
 
-        <form className="flex px-6 py-3 ml-10 mr-5 border-gray-200 rounded-full shadow-md max-w-3xl flex-grow items-center">
+        <form className="flex w-full px-6 py-3 sm:ml-10 sm:mr-5 border-gray-200 rounded-full shadow-md max-w-3xl flex-grow items-center">
           <input
             type="text"
             ref={searchInputRef}
             className="flex-grow w-full focus:outline-none"
-            defaultValue={ router.query.term}
+            defaultValue={router.query.term}
           />
 
           <XIcon
@@ -49,10 +49,8 @@ export default function Header() {
         </form>
 
         <Avatar className="ml-auto hidden sm:inline-flex" />
-
-
       </div>
-        <HeaderOptions />
+      <HeaderOptions />
     </header>
   );
 }
