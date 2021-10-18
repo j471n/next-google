@@ -1,12 +1,18 @@
 module.exports = {
   mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
         "open-sans": ["Open Sans", "sans-serif"],
       },
+
+      backgroundColor: (theme) => ({
+        ...theme("colors"),
+        "primary-dark": "#1A1C1D",
+        "secondary-dark": "#303134",
+      }),
     },
   },
   variants: {

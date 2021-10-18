@@ -5,12 +5,11 @@ import { useRouter } from "next/router";
 import SearchResults from "../components/SearchResults";
 
 export default function Search({ results }) {
-  console.log(results);
 
   const router = useRouter();
 
   return (
-    <div>
+    <div className="bg-white text-black dark:bg-primary-dark">
       <Head>
         <title>{router.query.term} - Google Search</title>
         <link rel="icon" href="/favicon.ico" />
