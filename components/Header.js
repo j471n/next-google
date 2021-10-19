@@ -51,7 +51,9 @@ export default function Header() {
           </button>
         </form>
 
-        <Avatar className="ml-auto hidden sm:inline-flex" />
+        <div className="hidden sm:inline-flex">
+          <Avatar className="ml-auto" />
+        </div>
       </div>
       <HeaderOptions />
     </header>
