@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="grid w-full divide-y-[1px] divide-gray-300 bg-gray-100 dark:bg-secondary-dark text-sm ">
       {currentCountry && (
         <div className="px-8 py-3 flex items">
-          <a href="https://ipinfo.io/" target="_blank">
+          <a href="https://ipinfo.io/" target="_blank" rel="noreferrer noopener">
             <LocationMarkerIcon className="h-5 text-gray-500 mr-2" />
           </a>
           <p className="capitalize">{`${currentCountry.city}, ${currentCountry.country}`}</p>

@@ -24,6 +24,7 @@ export default function Header() {
           width={120}
           className="cursor-pointer"
           onClick={() => router.push("/")}
+          alt="Google"
         />
 
         <form className="flex w-full px-6 py-3 mt-5 sm:mt-0 sm:ml-10 sm:mr-5 border-gray-200 rounded-full shadow-md max-w-3xl flex-grow items-center dark:bg-secondary-dark">
