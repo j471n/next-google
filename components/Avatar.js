@@ -6,8 +6,8 @@ export default function Avatar({ url, className }) {
       className={`h-10 w-10 rounded-full cursor-pointer transition duration-150 transform hover:scale-110 ${className}`}
       src={url ? url : defaultURL}
       alt="profile pic"
-      width={10}
-      height={10}
+      width={40}
+      height={40}
     />
   );
 }
