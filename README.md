@@ -25,6 +25,16 @@ It is the clone of the Google where you can search for anything and it will show
 [Click Here to see the Live Demo]()
 
 
+## Screenshots
+
+<p>
+  <img width="400" src="https://imgur.com/AUjbZpT.png"/>
+  <img width="400" src="https://imgur.com/QDE3zc8.png"/>
+  <img width="200" src="https://imgur.com/GNouoom.png"/>
+  <img width="200" src="https://imgur.com/EeudSyI.png"/>
+</p>
+
+
 ## Getting Started
 
 Create a directory or a folder
@@ -36,7 +46,7 @@ Create a directory or a folder
 Clone the project
 
 ```bash
-  git clone github-url
+  git clone https://github.com/j471n/next-google.git
 ```
 
 Go to the project directory
