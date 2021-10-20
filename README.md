@@ -94,6 +94,10 @@ To run this project, you will need to add the following environment variables to
 - then click on `Get Code` 
  - you will get the script file tag in that file such as `<script async src="https://cse.google.com/cse.js?cx=b221ffffddfd63f8a4"></script>` we  only need the `cx` value *copy* that and paste in you `.env` 
 
+`NEXT_PUBLIC_GEOLOCATION_API` - [Click Here](https://ipdata.co/)
+ - Go to the link and create an account and get the API For free
+ - There is 1500 request limit per day so be carefull with that and paste it to `.env` 
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
