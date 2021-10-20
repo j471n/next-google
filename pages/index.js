@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/solid";
 import Avatar from "../components/Avatar";
 import Footer from "../components/Footer";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -21,68 +21,72 @@ export default function Home() {
     router.push(`/search?term=${term}`);
   }
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen dark:bg-primary-dark dark:text-white">
-      <Head>
-        <meta charset="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-        />
-        <meta name="description" content="description of your project" />
-        <meta name="theme-color" content="#000" />
-        <title>Google</title>
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
-      </Head>
-
-      {/* Header */}
-      <header className="flex w-full items-center justify-between p-5 text-sm text-gray-700 dark:text-gray-300 md:font-medium">
-        {/* Left */}
-        <div className="flex space-x-4 items-center">
-          <p className="link">About</p>
-          <p className="link">Store</p>
-        </div>
-        {/* Right */}
-        <div className="flex space-x-4 items-center">
-          <p>Gmail</p>
-          <p>Images</p>
-          <ViewGridIcon className="h-10 w-10 p-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#111] rounded-full" />
-          <Avatar />
-        </div>
-      </header>
-      {/* Body */}
-
-      <form className="flex flex-col items-center justify-center flex-grow w-[90%]">
-        <Image
-          src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
-          className="w-225 md:w-300 md:h-100"
-          width={225}
-          height={75}
-          alt=""
-        />
-
-        <div className="flex w-full mt-5 hover:shadow focus-within:shadow  max-w-md rounded-full border border-gray-500 md:hover:border-white dark:bg-gray-700md:dark:hover:border-gray-100 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
-          <SearchIcon className="h-5 mr-3 text-gray-500 " />
-          <input
-            ref={searchInputRef}
-            type="text"
-            className="focus:outline-none flex-grow dark:bg-primary-dark"
+    <>
+      <div className="flex flex-col items-center justify-between min-h-screen dark:bg-primary-dark dark:text-white">
+        <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
           />
-          <MicrophoneIcon className="h-5 text-gray-500" />
-        </div>
+          <meta name="description" content="description of your project" />
+          <meta name="theme-color" content="#000" />
+          <title>Google</title>
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        </Head>
 
-        <div className="flex flex-row space-y-0 justify-center mt-8 space-x-4">
-          <button type="submit" onClick={search} className="btn">
-            Google Search
-          </button>
-          <button onClick={search} className="btn">
-            I&apos;m Feeling Lucky
-          </button>
-        </div>
-      </form>
+        {/* Header */}
+        <header className="flex w-full items-center justify-between p-5 text-sm text-gray-700 dark:text-gray-300 md:font-medium">
+          {/* Left */}
+          <div className="flex space-x-4 items-center">
+            <p className="link">About</p>
+            <p className="link">Store</p>
+          </div>
+          {/* Right */}
+          <div className="flex space-x-4 items-center">
+            <p>Gmail</p>
+            <p>Images</p>
+            <ViewGridIcon className="h-10 w-10 p-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#111] rounded-full" />
+            <Avatar />
+          </div>
+        </header>
+        {/* Body */}
 
-      <Footer />
-    </div>
+        <form className="flex flex-col items-center justify-center flex-grow w-[80%] sm:w-[90%]">
+          <Image
+            src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
+            className="w-225 md:w-300 md:h-100"
+            width={225}
+            height={75}
+            alt=""
+          />
+
+          <div className="flex w-full mt-5 hover:shadow focus-within:shadow  max-w-md rounded-full border border-gray-500 md:hover:border-white dark:bg-gray-700md:dark:hover:border-gray-100 px-5 py-2 sm:py-3 items-center sm:max-w-xl lg:max-w-2xl">
+            <SearchIcon className="h-5 mr-3 text-gray-500 " />
+            <input
+              ref={searchInputRef}
+              type="text"
+              className="focus:outline-none flex-grow dark:bg-primary-dark"
+            />
+            <MicrophoneIcon className="h-5 text-gray-500" />
+          </div>
+
+          <div className="flex flex-row space-y-0 w-[90%] justify-center mt-8 space-x-3 sm:space-x-4">
+            <button type="submit" onClick={search} className="btn">
+              Google Search
+            </button>
+            <button onClick={search} className="btn">
+              I&apos;m Feeling Lucky
+            </button>
+          </div>
+        </form>
+
+        <Footer />
+      </div>
+
+      <div id="portal"></div>
+    </>
   );
 }
