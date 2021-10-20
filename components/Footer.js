@@ -4,21 +4,30 @@ import { useState, useEffect } from "react";
 export default function Footer() {
   const [currentCountry, setCurrentCountry] = useState(null);
 
+const url = `https://api.ipdata.co/?api-key=${process.env.NEXT_PUBLIC_GEOLOCATION_API}`;
+
   useEffect(() => {
-    fetch("http://ip-api.com/json/?fields=country,city")
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setCurrentCountry(data))
       .catch((err) => console.log(err));
-  }, []);
+  }, [url]);
+
+  
+  console.log(currentCountry);
 
   return (
-    <footer className="grid w-full divide-y-[1px] divide-gray-300 bg-gray-100 dark:bg-secondary-dark text-sm ">
+    <footer className="sticky bottom-0 grid w-full divide-y-[1px] divide-gray-300 bg-gray-100 dark:bg-secondary-dark text-sm ">
       {currentCountry && (
         <div className="px-8 py-3 flex items">
-          <a href="https://ipinfo.io/" target="_blank" rel="noreferrer noopener">
+          <a
+            href="https://ipinfo.io/"
+            target="_blank"
+            rel="noreferrer noopener "
+          >
             <LocationMarkerIcon className="h-5 text-gray-500 mr-2" />
           </a>
-          <p className="capitalize">{`${currentCountry.city}, ${currentCountry.country}`}</p>
+          <p className="capitalize">{`${currentCountry.region}, ${currentCountry.country_name}`}</p>
         </div>
       )}
 
