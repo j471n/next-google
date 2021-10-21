@@ -22,13 +22,10 @@ export default function Home() {
   }
   return (
     <>
-      <div className="flex flex-col items-center justify-between min-h-screen dark:bg-primary-dark dark:text-white">
+      <div className="flex flex-col items-center justify-between min-h-screen dark:bg-primary-dark dark:text-white group">
         <Head>
           <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="description" content="description of your project" />
           <meta name="theme-color" content="#000" />
           <title>Google</title>
@@ -54,7 +51,7 @@ export default function Home() {
         </header>
         {/* Body */}
 
-        <form className="flex flex-col items-center justify-center flex-grow w-[80%] sm:w-[90%]">
+        <form className="flex h-96 flex-col items-center justify-center flex-grow w-[80%] sm:w-[90%]">
           <Image
             src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
             className="w-225 md:w-300 md:h-100"
@@ -68,7 +65,7 @@ export default function Home() {
             <input
               ref={searchInputRef}
               type="text"
-              className="focus:outline-none flex-grow dark:bg-primary-dark"
+              className="focus:outline-none w-full flex-grow dark:bg-primary-dark custom-input"
             />
             <MicrophoneIcon className="h-5 text-gray-500" />
           </div>
@@ -83,7 +80,7 @@ export default function Home() {
           </div>
         </form>
 
-        <Footer />
+        <Footer className=" group-even:focus:invisible" />
       </div>
 
       <div id="portal"></div>
