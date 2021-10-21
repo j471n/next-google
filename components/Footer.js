@@ -1,10 +1,10 @@
 import { GlobeIcon, LocationMarkerIcon } from "@heroicons/react/solid";
 import { useState, useEffect } from "react";
 
-export default function Footer() {
+export default function Footer({ className }) {
   const [currentCountry, setCurrentCountry] = useState(null);
 
-const url = `https://api.ipdata.co/?api-key=${process.env.NEXT_PUBLIC_GEOLOCATION_API}`;
+  const url = `https://api.ipdata.co/?api-key=${process.env.NEXT_PUBLIC_GEOLOCATION_API}`;
 
   useEffect(() => {
     fetch(url)
@@ -13,11 +13,10 @@ const url = `https://api.ipdata.co/?api-key=${process.env.NEXT_PUBLIC_GEOLOCATIO
       .catch((err) => console.log(err));
   }, [url]);
 
-  
-  console.log(currentCountry);
-
   return (
-    <footer className="sticky bottom-0 grid w-full divide-y-[1px] divide-gray-300 bg-gray-100 dark:bg-secondary-dark text-sm ">
+    <footer
+      className={`relative lg:sticky sm:mt-0 bottom-0 grid w-full divide-y-[1px] divide-gray-300 bg-gray-100 dark:bg-secondary-dark text-sm ${className}`}
+    >
       {currentCountry && (
         <div className="px-8 py-3 flex items">
           <a
