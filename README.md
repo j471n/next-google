@@ -1,3 +1,8 @@
+
+<p align="center" >
+<img height="100" src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" />
+</p>
+
 # Google Clone with Next.js
 
 It is the clone of the Google where you can search for anything and it will show the exactly same result we've used the Google Custom API through which we made this project, this is full responsive and you can also install it as the PWA. You can visit the links as well not danger in that, but there is one drawback of this that Google only allow 100 request from single API KEY per day. So this application can search only 100 times a day.
