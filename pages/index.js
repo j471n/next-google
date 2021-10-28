@@ -25,7 +25,10 @@ export default function Home() {
       <div className="flex flex-col items-center justify-between min-h-screen dark:bg-primary-dark dark:text-white group">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
           <meta name="description" content="description of your project" />
           <meta name="theme-color" content="#000" />
           <title>Google</title>
@@ -46,7 +49,7 @@ export default function Home() {
             <p>Gmail</p>
             <p>Images</p>
             <ViewGridIcon className="h-10 w-10 p-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#111] rounded-full" />
-            <Avatar />
+            <Avatar url="/img/profile.jpg" />
           </div>
         </header>
         {/* Body */}
